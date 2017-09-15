@@ -1,5 +1,11 @@
 dl.dl-horizontal
-  dt Email :
-  dd = current_user.email
+  dt First name :
+  dd = current_user.first_name
+  dt Last name :
+  dd = current_user.last_name
   dt Username :
   dd = current_user.username
+  dt Email :
+  dd = current_user.email
+  p
+    =link_to "Edit profile", edit_user_registration_path, class: 'btn btn-info'
