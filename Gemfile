@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
-
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
+ruby '2.4.0'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
@@ -14,11 +9,12 @@ gem 'less-rails'
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.5'
+gem 'rubocop'
 gem 'sass-rails', '~> 5.0'
 gem 'slim'
 gem 'therubyracer'
 gem 'turbolinks', '~> 5'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
@@ -26,10 +22,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
