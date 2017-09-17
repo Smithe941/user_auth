@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: 'home#show'
-  get 'persons/profile', as: 'user_root'
+
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_scope :user do
+    get 'profile', to: 'users/registrations#show'
+  end
 end
