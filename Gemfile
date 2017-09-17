@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.4.0'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
@@ -8,13 +7,13 @@ gem 'jquery-rails'
 gem 'less-rails'
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.0'
-gem 'rails', '~> 5.0.5'
+gem 'rails', '5.0.5'
 gem 'rubocop'
 gem 'sass-rails', '~> 5.0'
 gem 'slim'
 gem 'therubyracer'
 gem 'turbolinks', '~> 5'
-gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'bootstrap-sass'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
