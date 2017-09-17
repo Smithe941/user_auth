@@ -1,25 +1,19 @@
-h2
-  | Sign in
+h2.text-center Sign in
 
 .row
-  .col-sm-2
+  .col-sm-4.col-sm-offset-4
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-      .field
-        = f.label :email
-        br
+      .form-group
+        = f.label :email, class: 'label label-info'
         = f.email_field :email , autofocus: true, class: 'form-control'
-      .field
-        br
-        = f.label :password
-        br
+      .form-group
+        = f.label :password, class: 'label label-info'
         = f.password_field :password, autocomplete: "off", class: 'form-control'
       - if devise_mapping.rememberable?
-        .field
-          br
+        .form-group
           = f.check_box :remember_me
-          = f.label :remember_me
+          = f.label :remember_me, class: 'remember-me-checkbox'
       .actions
-        br
         = f.submit "Sign In", class: 'btn btn-success'
       | or
     = render "devise/shared/links"
