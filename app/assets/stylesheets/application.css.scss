@@ -15,6 +15,7 @@
  */
 
  @import 'bootstrap';
+ @import 'font-awesome';
 
  .navbar{
   margin-bottom: 0
@@ -22,4 +23,25 @@
 
 .remember-me-checkbox{
   padding-left: 4px
+}
+
+.container{
+  width: 70%
+}
+
+.new-post{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  color: white;
+  background-color:  green;
+  padding: 15px 0 0 22px;
+  border-radius: 50%;
+  width: 67px;
+  height: 67px;
+  &:hover{
+    color: white;
+    box-shadow: #555 1px 1px 4px 4px;
+    -webkit-box-shadow: #555 1px 1px 4px 4px;
+  }
 }

@@ -1,0 +1,14 @@
+.panel.panel-default
+  .panel-heading
+    =post.title
+    .dropdown.pull-right
+      a.fa.fa-bars.dropdown-toggle data-toggle="dropdown" href='#'
+      ul.dropdown-menu
+        li
+          = link_to 'Show', post
+        li
+          = link_to 'Edit', edit_post_path(post)
+        li
+          = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+  .panel-body
+    =post.body

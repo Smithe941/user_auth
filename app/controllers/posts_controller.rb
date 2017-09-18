@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.user = current_user
   end
 
   def edit
@@ -17,6 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
@@ -50,6 +52,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.fetch(:post, {})
+      params.require(:post).permit(:title, :body)
     end
 end
