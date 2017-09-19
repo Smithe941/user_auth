@@ -1,5 +1,9 @@
 h1 Listing posts
 
-= link_to fa_icon(:plus), new_post_path, id: 'new_post_link', class: 'new-post fa-2x', remote: true
-.panel-group
+= link_to fa_icon(:plus), new_post_path, id: 'new_post_link',
+                                         class: 'new-post fa-2x',
+                                         remote: true,
+                                         'data-target': '#myModal',
+                                         'data-toggle': 'modal'
+.panel-group#posts
   ==render @posts

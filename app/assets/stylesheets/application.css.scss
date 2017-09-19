@@ -29,19 +29,24 @@
   width: 70%
 }
 
-.new-post{
+.new-post, .new-post:visited{
   position: fixed;
   bottom: 25px;
   right: 25px;
   color: white;
   background-color:  green;
   padding: 15px 0 0 22px;
-  border-radius: 50%;
   width: 67px;
   height: 67px;
+  border-radius: 50%;
   &:hover{
     color: white;
     box-shadow: #555 1px 1px 4px 4px;
     -webkit-box-shadow: #555 1px 1px 4px 4px;
   }
+}
+
+.text-danger {
+  color: #a94442 !important;
+  display: inline-block;
 }

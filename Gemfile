@@ -19,6 +19,7 @@ gem 'bootstrap-sass'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'better_errors'
   gem 'byebug', platform: :mri
   gem 'pry'
 end

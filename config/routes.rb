@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     get 'profile', to: 'users/registrations#show'
   end
   resources :posts
-  resources :comments
+  # resources :comments
 end

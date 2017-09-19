@@ -1,5 +1,14 @@
-= simple_form_for @post, remote: true do |f|
-  =f.input :title
-  =f.input :body
+button.close.pull-right data-dismiss="modal" type="button"  ×
+h2.h2.text-center = title_type(resource)
+= simple_form_for resource, remote: true do |f|
 
-  .actions = f.button :submit
+  .form-group
+    = f.label :title, class: 'label label-info'
+    = f.error :title, class: 'text-danger'
+    = f.input :title, class: 'form-control', error: false, label: false, autofocus: true
+  .form-group
+    = f.label :body, class: 'label label-info'
+    = f.error :body, class: 'text-danger'
+    = f.input :body, class: 'form-control', error: false, label: false
+
+  .actions = f.button :submit, remote: true

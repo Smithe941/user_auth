@@ -1,6 +1,6 @@
 <% if @post.errors.any? %>
   $('.modal-body').html('<%= j render 'form', resource: @post %>');
 <% else %>
-  $('#posts').prepend('<%= j render @post, post: @post %>');
+  $('#post_<%= @post.id %>').replaceWith('<%= j render @post, post: @post %>');
   $('.modal').modal('toggle');
 <% end %>
