@@ -1,4 +1,5 @@
 .panel.panel-default
+  =post.user.username
   .panel-heading
     =post.title
     .dropdown.pull-right
@@ -12,3 +13,4 @@
           = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
   .panel-body
     =post.body
+    =post.user_id
