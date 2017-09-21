@@ -1,16 +1,18 @@
+
 .panel.panel-default id="post_#{post.id}"
   .panel-heading
     = post.title
-    .dropdown.pull-right
-      a.fa.fa-bars.dropdown-toggle data-toggle="dropdown" href='#'
-      ul.dropdown-menu
-        li = link_to 'Show', post
-        li = link_to 'Edit', edit_post_path(post), remote: true,
-                                                   'data-target': '#myModal',
-                                                   'data-toggle': 'modal'
-        li = link_to 'Destroy', post, data: { confirm: 'Are you sure?' },
-                                      method: :delete,
-                                      remote: true
+    - if can? :edit, post
+      .dropdown.pull-right
+        a.fa.fa-bars.dropdown-toggle data-toggle="dropdown" href='#'
+        ul.dropdown-menu
+          li = link_to 'Show', post
+          li = link_to 'Edit', edit_post_path(post), remote: true,
+                                                     'data-target': '#myModal',
+                                                     'data-toggle': 'modal'
+          li = link_to 'Destroy', post, data: { confirm: 'Are you sure?' },
+                                        method: :delete,
+                                        remote: true
   .panel-body
     = post.body
     .text-right = "Author: #{post.user.username}"
