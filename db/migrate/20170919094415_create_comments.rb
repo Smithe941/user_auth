@@ -1,10 +1,10 @@
 class CreateComments < ActiveRecord::Migration[5.0]
   def change
     create_table :comments do |t|
-      t.string      :body
-      t.date        :published_at
-      t.belongs_to  :user
-      t.belongs_to  :post
+      t.string :name
+      t.text :body
+      t.references :post, foreign_key: true
+
       t.timestamps
     end
   end

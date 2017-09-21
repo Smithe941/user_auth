@@ -1,4 +1,9 @@
-= simple_form_for @comment do |f|
-  =f.input :body
-
-  .actions = f.button :submit
+= form_for ([ @post, @post.comments.build ]) do |f|
+  p
+  = f.label :name
+  p
+  = f.label :body
+  = f.text_area :body
+  br
+  p
+  = f.submit

@@ -16,3 +16,4 @@
   .panel-body
     = post.body
     .text-right = "Author: #{post.user.username}"
+    .text-right = "#{post.comments.count} Comments"
