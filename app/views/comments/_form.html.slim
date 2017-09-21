@@ -1,9 +1,6 @@
-= form_for ([ @post, @post.comments.build ]) do |f|
-  p
-  = f.label :name
-  p
-  = f.label :body
-  = f.text_area :body
-  br
-  p
-  = f.submit
+= simple_form_for ([ @post, @post.comments.build ]) do |f|
+  .form-group
+    = f.label :body, 'Leave your comment', class: 'label label-info'
+    = f.error :body, class: 'text-danger'
+    = f.input :body, class: 'form-control', error: false, label: false, autofocus: true
+  = f.button :submit

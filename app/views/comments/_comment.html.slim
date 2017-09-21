@@ -1,3 +1,5 @@
-= comment.name
-= comment.body
-= time_ago_in_words(comment.created_at)
+.alert.alert-warning
+  .pull-left = comment.user.username
+  .pull-right = time_ago_in_words(comment.created_at)
+  br
+  = comment.body
