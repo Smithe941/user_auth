@@ -3,8 +3,8 @@ class CommentsController < ApplicationController
 
 
   def create
-    @post = Post.find(params[:post_id])
-    @post.comments.create(comment_params.merge(user: current_user))
+    post = Post.find(params[:post_id])
+    @comment = post.comments.create(comment_params.merge(user: current_user))
   end
 
   def destroy

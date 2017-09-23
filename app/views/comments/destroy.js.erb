@@ -1,1 +1,3 @@
-console.log('destroy.js.erb')
+$("#comment_<%= @comment.id %>").slideUp('slow', function() { $(this).remove(); });
+// TO DO 'Fix comments counter (instant change)'
+// $('#post_#{@comment.post} .comment-field').html("#{@comment.post.comments.count} Comments")

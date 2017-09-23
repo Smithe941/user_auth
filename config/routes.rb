@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     get 'profile', to: 'users/registrations#show'
   end
   resources :posts do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
   end
 end

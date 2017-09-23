@@ -1,1 +1,4 @@
-console.log('create.js.erb')
+$('#comments').append('<%= j render @comment, comment: @comment %>');
+$('#new_comment textarea').val('');
+// TO DO 'Fix comments counter (instant change)'
+// $('#post_#{@comment.post} .comment-field').html("#{@comment.post.comments.count} Comments")

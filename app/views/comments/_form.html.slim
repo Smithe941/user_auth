@@ -1,6 +1,6 @@
-= simple_form_for ([ @post, @post.comments.build ]) do |f|
+= simple_form_for [ @post, @post.comments.build ], remote: true  do |f|
   .form-group
     = f.label :body, 'Leave your comment', class: 'label label-info'
     = f.error :body, class: 'text-danger'
     = f.input :body, class: 'form-control', error: false, label: false, autofocus: true
-  = f.button :submit
+  = f.button :submit, remote: true
