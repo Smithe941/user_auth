@@ -1,8 +1,7 @@
-.alert.alert-warning id="comment_#{comment.id}"
-  = link_to post_comment_path(comment.post, comment), method: :delete, remote: true
-    i.close.pull-right ×
-  br
-  .pull-left = comment.user.username
-  .pull-right = time_ago_in_words(comment.created_at)
-  br
-  = comment.body
+.comment.alert.alert-warning id="comment_#{comment.id}"
+  - if can? :manage, comment
+    = link_to post_comment_path(comment.post, comment), method: :delete, remote: true
+      i.close ×
+  span.comment-username = comment.user.username
+  p = comment.body
+  span.pull-right = time_ago_in_words(comment.created_at)

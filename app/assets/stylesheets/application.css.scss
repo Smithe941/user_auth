@@ -51,6 +51,15 @@
   display: inline-block;
 }
 
-.modal .panel-group .panel .dropdown{
-  display: none
+.modal .panel-group .panel{
+  .dropdown, .comment-field{
+    display: none;
+  }
+}
+.comment .comment-username{
+  font-weight: bold;
+}
+.comment.alert{
+  padding-bottom: 30px;
+  padding-top: 5px;
 }

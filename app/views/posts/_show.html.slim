@@ -4,5 +4,6 @@ h2.h2.text-center Show
   == render post
 #comments
   == render post.comments
-== render 'comments/form'
+- if can? :create, Comment
+  == render 'comments/form'
 
