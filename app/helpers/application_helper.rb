@@ -1,6 +1,6 @@
 module ApplicationHelper
   def alert_type(type)
-     type == 'alert' ? 'danger' : 'success'
+    type == 'alert' ? 'danger' : 'success'
   end
 
   def title_type(resource)

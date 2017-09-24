@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: %i[show edit update destroy]
   respond_to :js, except: [:index]
   load_and_authorize_resource
 
@@ -7,8 +7,7 @@ class PostsController < ApplicationController
     @posts = Post.reversed
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @post = Post.new
@@ -20,8 +19,7 @@ class PostsController < ApplicationController
     @post.save
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @post.update(post_params)
@@ -32,11 +30,12 @@ class PostsController < ApplicationController
   end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
-    end
 
-    def post_params
-      params.require(:post).permit(:title, :body)
-    end
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :body)
+  end
 end

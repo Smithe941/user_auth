@@ -4,6 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts
-  ROLES = %i[user admin]
-
+  ROLES = %i[user admin].freeze
 end

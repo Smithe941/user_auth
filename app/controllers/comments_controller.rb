@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   respond_to :js
 
-
   def create
     post = Post.find(params[:post_id])
     @comment = post.comments.create(comment_params.merge(user: current_user))

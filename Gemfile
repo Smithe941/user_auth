@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass'
 gem 'cancancan', '~> 2.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
@@ -16,7 +17,6 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'therubyracer'
 gem 'turbolinks', '~> 5'
-gem 'bootstrap-sass'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
